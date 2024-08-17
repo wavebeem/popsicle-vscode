@@ -1,0 +1,1 @@
+- Report bug about status bar colors in light mode
