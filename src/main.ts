@@ -55,20 +55,18 @@ interface TokenColor {
 }
 
 const ui = {
-  fg: oklch(30, 40, 40),
+  fg: oklch(40, 100, 40),
 
   bg0: oklch(99, 15, 40),
-  bg0b: oklch(98, 15, 40),
-  bg1: oklch(95, 15, 40),
+  bg0b: oklch(97, 15, 40),
+  bg1: oklch(94, 15, 40),
 
-  border0: oklch(85, 15, 40),
-  border1: oklch(60, 15, 40),
+  border0: oklch(80, 20, 40),
+  border1: oklch(60, 20, 40),
 
   tooltip: {
-    // Based on classic Windows tooltips (background: #ffffe1, border and text:
-    // #000000)
-    bg: oklch(99, 10, 107),
-    border: oklch(60, 10, 107),
+    bg: oklch(99, 15, 70),
+    border: oklch(50, 15, 70),
   },
 
   cursor: oklch(50, 100, 340),
@@ -78,7 +76,7 @@ const ui = {
   // Classic HTML blue link color ("#0000ff")
   link: oklch(45, 77, 264),
 
-  accent: oklch(50, 80, 170),
+  accent: oklch(45, 80, 170),
 
   bracket1: oklch(50, 40, 170),
   bracket2: oklch(50, 40, 250),
@@ -479,7 +477,7 @@ function themeEditor(): ThemeUIColors {
     "editor.background": ui.bg0,
     "editor.foldBackground": transparent,
     "editorLink.activeForeground": ui.link,
-    "editor.lineHighlightBackground": alpha(ui.fg, 5),
+    "editor.lineHighlightBackground": alpha(bg.blue, 15),
     "editor.rangeHighlightBackground": alpha(bg.yellow, 25),
     "editor.selectionBackground": alpha(bg.blue, 30),
     "editor.inactiveSelectionBackground": alpha(bg.blue, 30),
@@ -532,7 +530,7 @@ function themeTabs(): ThemeUIColors {
     "editorGroupHeader.tabsBorder": ui.border0,
     "editorGroupHeader.border": ui.border0,
     "breadcrumb.background": ui.bg0,
-    "editorGroupHeader.noTabsBackground": ui.bg0,
+    "editorGroupHeader.noTabsBackground": ui.bg0b,
     "editorGroupHeader.tabsBackground": ui.bg1,
     "tab.activeBorder": ui.border0,
     "tab.unfocusedActiveBorder": ui.border0,
