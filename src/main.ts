@@ -139,10 +139,10 @@ const diff = {
 
 const bg = {
   green: oklch(80, 50, 140),
-  orange: oklch(80, 50, 50),
+  orange: oklch(80, 50, 40),
   yellow: oklch(80, 50, 100),
-  blue: oklch(80, 50, 250),
-  purple: oklch(80, 50, 310),
+  blue: oklch(80, 50, 240),
+  purple: oklch(80, 50, 330),
   white: oklch(100, 0, 0),
 } as const;
 
