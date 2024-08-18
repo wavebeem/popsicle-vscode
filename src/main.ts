@@ -3,7 +3,6 @@ import fs from "fs";
 import Color from "colorjs.io";
 import * as ANSI from "ansi-colors";
 import { ThemeUIColors } from "./types";
-// import { letsGoOKLCH } from "./convert-oklch";
 
 const transparent = "#00000000";
 
@@ -59,11 +58,11 @@ const ui = {
   fg: oklch(30, 40, 40),
 
   bg0: oklch(100, 0, 40),
-  bg0b: oklch(99, 1, 40),
-  bg1: oklch(95, 3, 40),
+  bg0b: oklch(99, 5, 40),
+  bg1: oklch(95, 10, 40),
 
-  border0: oklch(85, 6, 40),
-  border1: oklch(60, 6, 40),
+  border0: oklch(85, 15, 40),
+  border1: oklch(60, 15, 40),
 
   tooltip: {
     // Based on classic Windows tooltips (background: #ffffe1, border and text:
@@ -72,18 +71,18 @@ const ui = {
     border: oklch(60, 10, 107),
   },
 
-  cursor: oklch(50, 100, 0),
+  cursor: oklch(50, 100, 330),
 
   shadow: transparent,
 
   // Classic HTML blue link color ("#0000ff")
   link: oklch(45, 77, 264),
 
-  accent: oklch(50, 80, 40),
+  accent: oklch(50, 80, 190),
 
-  bracket1: oklch(55, 40, 300),
-  bracket2: oklch(55, 40, 40),
-  bracket3: oklch(55, 40, 135),
+  bracket1: oklch(50, 40, 190),
+  bracket2: oklch(50, 40, 240),
+  bracket3: oklch(50, 40, 330),
 
   error: oklch(50, 100, 0),
 } as const;
@@ -91,12 +90,12 @@ const ui = {
 const syntax = {
   default: oklch(20, 30, 40),
   keyword: oklch(47, 100, 190),
-  punctuation: oklch(50, 40, 190),
+  punctuation: oklch(50, 40, 40),
 
-  string: oklch(52, 100, 125),
+  string: oklch(52, 100, 240),
   type: oklch(47, 60, 40),
   function: oklch(52, 100, 330),
-  property: oklch(52, 100, 190),
+  property: oklch(52, 100, 240),
   comment: oklch(55, 0, 190),
   key: oklch(42, 60, 190),
 } as const;
@@ -125,11 +124,11 @@ const tokens = {
 const terminal = {
   black: oklch(40, 0, 0),
   red: oklch(54, 100, 10),
-  green: oklch(54, 100, 140),
+  green: oklch(50, 100, 140),
   yellow: oklch(54, 100, 50),
   blue: oklch(54, 100, 250),
   magenta: oklch(54, 100, 310),
-  cyan: oklch(54, 100, 200),
+  cyan: oklch(50, 100, 200),
   white: oklch(100, 0, 0),
 } as const;
 
