@@ -57,9 +57,9 @@ interface TokenColor {
 const ui = {
   fg: oklch(30, 40, 40),
 
-  bg0: oklch(100, 0, 40),
-  bg0b: oklch(99, 5, 40),
-  bg1: oklch(95, 10, 40),
+  bg0: oklch(99, 15, 40),
+  bg0b: oklch(98, 15, 40),
+  bg1: oklch(95, 15, 40),
 
   border0: oklch(85, 15, 40),
   border1: oklch(60, 15, 40),
@@ -89,13 +89,13 @@ const ui = {
 
 const syntax = {
   default: oklch(20, 30, 40),
-  keyword: oklch(47, 100, 190),
-  punctuation: oklch(50, 40, 40),
+  keyword: oklch(52, 100, 190),
+  punctuation: oklch(52, 40, 40),
 
   string: oklch(52, 100, 240),
-  type: oklch(47, 60, 40),
+  type: oklch(52, 60, 40),
   function: oklch(52, 100, 330),
-  property: oklch(52, 100, 240),
+  property: oklch(42, 60, 240),
   comment: oklch(55, 0, 190),
   key: oklch(42, 60, 190),
 } as const;
@@ -125,10 +125,10 @@ const terminal = {
   black: oklch(40, 0, 0),
   red: oklch(54, 100, 10),
   green: oklch(50, 100, 140),
-  yellow: oklch(54, 100, 50),
-  blue: oklch(54, 100, 250),
-  magenta: oklch(54, 100, 310),
-  cyan: oklch(50, 100, 200),
+  yellow: oklch(54, 100, 40),
+  blue: oklch(52, 100, 240),
+  magenta: oklch(54, 100, 330),
+  cyan: oklch(50, 100, 190),
   white: oklch(100, 0, 0),
 } as const;
 
@@ -482,7 +482,7 @@ function themeEditor(): ThemeUIColors {
     "editorLink.activeForeground": ui.link,
     "editor.lineHighlightBackground": alpha(ui.fg, 5),
     "editor.rangeHighlightBackground": alpha(bg.yellow, 25),
-    "editor.selectionBackground": alpha(bg.green, 30),
+    "editor.selectionBackground": alpha(bg.blue, 30),
     "editor.inactiveSelectionBackground": alpha(bg.green, 30),
     "editor.wordHighlightBackground": alpha(bg.blue, 50),
     "editor.wordHighlightStrongBackground": alpha(bg.purple, 50),
@@ -533,7 +533,7 @@ function themeTabs(): ThemeUIColors {
     "editorGroupHeader.tabsBorder": ui.border0,
     "editorGroupHeader.border": ui.border0,
     "breadcrumb.background": ui.bg0,
-    "editorGroupHeader.noTabsBackground": ui.bg0b,
+    "editorGroupHeader.noTabsBackground": ui.bg0,
     "editorGroupHeader.tabsBackground": ui.bg1,
     "tab.activeBorder": ui.border0,
     "tab.unfocusedActiveBorder": ui.border0,

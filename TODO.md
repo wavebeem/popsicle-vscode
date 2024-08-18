@@ -1,1 +1,1 @@
-- Report bug about status bar colors in light mode
+- Audit `bg` colors and their usage
