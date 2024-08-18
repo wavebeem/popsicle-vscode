@@ -483,7 +483,7 @@ function themeEditor(): ThemeUIColors {
     "editor.lineHighlightBackground": alpha(ui.fg, 5),
     "editor.rangeHighlightBackground": alpha(bg.yellow, 25),
     "editor.selectionBackground": alpha(bg.blue, 30),
-    "editor.inactiveSelectionBackground": alpha(bg.green, 30),
+    "editor.inactiveSelectionBackground": alpha(bg.blue, 30),
     "editor.wordHighlightBackground": alpha(bg.blue, 50),
     "editor.wordHighlightStrongBackground": alpha(bg.purple, 50),
     "editorOverviewRuler.border": alpha(ui.border0, 25),
