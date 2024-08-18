@@ -71,33 +71,32 @@ const ui = {
     border: oklch(60, 10, 107),
   },
 
-  cursor: oklch(50, 100, 330),
+  cursor: oklch(50, 100, 340),
 
   shadow: transparent,
 
   // Classic HTML blue link color ("#0000ff")
   link: oklch(45, 77, 264),
 
-  accent: oklch(50, 80, 190),
+  accent: oklch(50, 80, 170),
 
-  bracket1: oklch(50, 40, 190),
-  bracket2: oklch(50, 40, 240),
-  bracket3: oklch(50, 40, 330),
+  bracket1: oklch(50, 40, 170),
+  bracket2: oklch(50, 40, 250),
+  bracket3: oklch(50, 40, 340),
 
   error: oklch(50, 100, 0),
 } as const;
 
 const syntax = {
   default: oklch(20, 30, 40),
-  keyword: oklch(52, 100, 190),
-  punctuation: oklch(52, 40, 40),
-
-  string: oklch(52, 100, 240),
-  type: oklch(52, 60, 40),
-  function: oklch(52, 100, 330),
-  property: oklch(42, 60, 240),
-  comment: oklch(55, 0, 190),
-  key: oklch(42, 60, 190),
+  punctuation: oklch(52, 30, 40),
+  type: oklch(52, 100, 340),
+  function: oklch(52, 60, 340),
+  string: oklch(52, 100, 250),
+  property: oklch(42, 60, 250),
+  keyword: oklch(52, 100, 170),
+  key: oklch(42, 60, 170),
+  comment: oklch(52, 0, 170),
 } as const;
 
 function createToken(
@@ -126,23 +125,23 @@ const terminal = {
   red: oklch(54, 100, 10),
   green: oklch(50, 100, 140),
   yellow: oklch(54, 100, 40),
-  blue: oklch(52, 100, 240),
-  magenta: oklch(54, 100, 330),
-  cyan: oklch(50, 100, 190),
+  blue: oklch(52, 100, 250),
+  magenta: oklch(54, 100, 340),
+  cyan: oklch(50, 100, 170),
   white: oklch(100, 0, 0),
 } as const;
 
 const diff = {
   red: oklch(75, 50, 10),
-  blue: oklch(85, 50, 260),
+  blue: oklch(85, 50, 250),
 } as const;
 
 const bg = {
   green: oklch(80, 50, 140),
   orange: oklch(80, 50, 40),
   yellow: oklch(80, 50, 100),
-  blue: oklch(80, 50, 240),
-  purple: oklch(80, 50, 330),
+  blue: oklch(80, 50, 250),
+  purple: oklch(80, 50, 340),
   white: oklch(100, 0, 0),
 } as const;
 
@@ -406,7 +405,7 @@ function themeDropdown(): ThemeUIColors {
 }
 
 function themeDragAndDrop(): ThemeUIColors {
-  const color = alpha(bg.green, 30);
+  const color = alpha(bg.blue, 30);
   return {
     "list.dropBackground": color,
     "sideBar.dropBackground": color,
@@ -420,14 +419,14 @@ function themeDragAndDrop(): ThemeUIColors {
 function themeButton(): ThemeUIColors {
   return {
     // Really wish we could get separate borders for the two button types...
-    "button.border": ui.accent,
-    "button.background": ui.accent,
+    "button.border": ui.fg,
+    "button.background": ui.fg,
     "button.foreground": ui.bg0,
-    "button.hoverBackground": alpha(ui.accent, 90),
+    "button.hoverBackground": alpha(ui.fg, 80),
     "button.separator": alpha(ui.bg0, 30),
-    "button.secondaryBackground": ui.bg1,
+    "button.secondaryBackground": ui.bg0,
     "button.secondaryForeground": ui.fg,
-    "button.secondaryHoverBackground": alpha(ui.bg1, 90),
+    "button.secondaryHoverBackground": alpha(ui.bg0, 80),
   };
 }
 
@@ -870,6 +869,7 @@ function tokenColors(): TokenColor[] {
         "keyword.operator.typeid",
         "keyword.operator.alignas",
         "keyword.operator.instanceof",
+        // Highlight Python `and` and `or` like keywords
         "keyword.operator.logical.python",
         "keyword.operator.wordlike",
       ],
