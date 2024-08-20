@@ -2,7 +2,7 @@
   "name": "popsicle-vscode",
   "displayName": "Popsicle Theme",
   "description": "A light theme inspired by orange popsicles and summer.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/wavebeem/popsicle-vscode.git"
