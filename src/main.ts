@@ -473,7 +473,7 @@ function themeEditor(): ThemeUIColors {
     "editor.findMatchBackground": alpha(bg.orange, 50),
     "editor.findMatchHighlightBackground": alpha(bg.orange, 50),
     "editor.findRangeHighlightBackground": alpha(bg.yellow, 50),
-    "editor.foreground": ui.fg,
+    "editor.foreground": syntax.default,
     "editor.background": ui.bg0,
     "editor.foldBackground": transparent,
     "editorLink.activeForeground": ui.link,
