@@ -56,6 +56,7 @@ interface TokenColor {
 
 const ui = {
   fg: oklch(40, 100, 40),
+  fg2: oklch(50, 20, 40),
 
   bg0: oklch(99, 15, 40),
   bg0b: oklch(97, 15, 40),
@@ -573,6 +574,7 @@ function colors(): ThemeUIColors {
     ...themeDragAndDrop(),
     ...themeButton(),
     foreground: ui.fg,
+    descriptionForeground: ui.fg2,
     "panel.background": ui.bg0b,
     "panel.border": ui.border0,
     "panelTitle.activeBorder": ui.accent,
@@ -1144,6 +1146,8 @@ function printContrastReport(): void {
   showContrast("text", ui.error, ui.bg1, "ui.error", "ui.bg1");
   showContrast("text", ui.fg, ui.bg0, "ui.fg", "ui.bg0");
   showContrast("text", ui.fg, ui.bg1, "ui.fg", "ui.bg1");
+  showContrast("text", ui.fg2, ui.bg0, "ui.fg2", "ui.bg0");
+  showContrast("text", ui.fg2, ui.bg1, "ui.fg2", "ui.bg1");
   showContrast("text", ui.link, ui.bg0, "ui.link", "ui.bg0");
   showContrast("text", ui.link, ui.bg1, "ui.link", "ui.bg1");
   showContrast("text", ui.accent, ui.bg0, "ui.accent", "ui.bg0");

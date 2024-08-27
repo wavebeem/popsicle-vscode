@@ -32,6 +32,7 @@
     "commandCenter.inactiveBorder": "#ebad97",
     "commandCenter.inactiveForeground": "#ebad97",
     "debugToolBar.background": "#ffe0d0",
+    "descriptionForeground": "#8a533f",
     "diffEditor.border": "#ebad97",
     "diffEditor.diagonalFill": "#3500001a",
     "diffEditor.insertedLineBackground": "#9cd3ff40",
