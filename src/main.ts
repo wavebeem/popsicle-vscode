@@ -19,7 +19,7 @@ const Contrast = {
     text: 4.5,
     ui: 3,
     // Not a WCAG value
-    decoration: 1.2,
+    decoration: 1.15,
   },
 } as const;
 type ContrastAlgorithm = keyof typeof Contrast;
@@ -55,19 +55,25 @@ interface TokenColor {
 }
 
 const ui = {
-  fg: oklch(40, 100, 40),
-  fg2: oklch(50, 20, 40),
+  fg: oklch(30, 30, 30),
+  fg2: oklch(40, 30, 30),
 
-  bg0: oklch(99, 15, 40),
-  bg0b: oklch(97, 15, 40),
-  bg1: oklch(94, 15, 40),
+  bg0: oklch(99, 20, 30),
+  bg0b: oklch(96, 20, 30),
+  bg1: oklch(95, 20, 30),
 
-  border0: oklch(80, 20, 40),
-  border1: oklch(60, 20, 40),
+  border0: oklch(85, 10, 30),
+  border1: oklch(60, 10, 30),
 
   tooltip: {
-    bg: oklch(99, 15, 70),
-    border: oklch(50, 15, 70),
+    bg: oklch(99, 5, 140),
+    border: oklch(80, 2.5, 140),
+  },
+
+  statusbar: {
+    bg: oklch(90, 20, 140),
+    fg: oklch(20, 40, 140),
+    border: oklch(85, 10, 140),
   },
 
   cursor: oklch(50, 100, 340),
@@ -77,7 +83,7 @@ const ui = {
   // Classic HTML blue link color ("#0000ff")
   link: oklch(45, 77, 264),
 
-  accent: oklch(45, 80, 170),
+  accent: oklch(50, 50, 290),
 
   bracket1: oklch(50, 40, 170),
   bracket2: oklch(50, 40, 250),
@@ -87,8 +93,8 @@ const ui = {
 } as const;
 
 const syntax = {
-  default: oklch(20, 30, 40),
-  punctuation: oklch(52, 30, 40),
+  default: oklch(20, 30, 30),
+  punctuation: oklch(52, 30, 30),
   type: oklch(52, 100, 340),
   function: oklch(52, 60, 340),
   string: oklch(52, 100, 250),
@@ -120,14 +126,14 @@ const tokens = {
 } as const;
 
 const terminal = {
-  black: oklch(40, 0, 0),
+  black: oklch(40, 10, 30),
   red: oklch(54, 100, 10),
   green: oklch(50, 100, 140),
-  yellow: oklch(54, 100, 40),
+  yellow: oklch(50, 100, 70),
   blue: oklch(52, 100, 250),
   magenta: oklch(54, 100, 340),
-  cyan: oklch(50, 100, 170),
-  white: oklch(100, 0, 0),
+  cyan: oklch(50, 100, 200),
+  white: oklch(99, 10, 30),
 } as const;
 
 const diff = {
@@ -137,7 +143,7 @@ const diff = {
 
 const bg = {
   green: oklch(80, 50, 140),
-  orange: oklch(80, 50, 40),
+  orange: oklch(80, 50, 30),
   yellow: oklch(80, 50, 100),
   blue: oklch(80, 50, 250),
   purple: oklch(80, 50, 340),
@@ -321,30 +327,30 @@ function themeGit(): ThemeUIColors {
     "gitDecoration.deletedResourceForeground": terminal.red,
     "gitDecoration.untrackedResourceForeground": terminal.magenta,
     "gitDecoration.conflictingResourceForeground": terminal.cyan,
-    "gitDecoration.ignoredResourceForeground": alpha(ui.fg, 40),
+    "gitDecoration.ignoredResourceForeground": alpha(ui.fg, 30),
   };
 }
 
 function themeStatusBar(): ThemeUIColors {
   // Hover colors don't appear to work right for light themes
   return {
-    "statusBar.border": ui.border0,
+    "statusBar.border": ui.statusbar.border,
 
     "statusBarItem.errorBackground": ui.error,
     "statusBarItem.errorForeground": ui.bg0,
     "statusBarItem.errorHoverBackground": ui.error,
     "statusBarItem.errorHoverForeground": ui.bg0,
 
-    // "statusBarItem.activeBackground": alpha(ui.border1, 40),
+    // "statusBarItem.activeBackground": alpha(ui.border1, 30),
     // "statusBarItem.hoverBackground": alpha(ui.border1, 20),
-    "statusBarItem.remoteForeground": ui.fg,
-    "statusBarItem.remoteBackground": ui.bg1,
+    "statusBarItem.remoteForeground": ui.statusbar.fg,
+    "statusBarItem.remoteBackground": ui.statusbar.bg,
     // "statusBarItem.remoteHoverForeground": ui.fg,
     // "statusBarItem.remoteHoverBackground": alpha(ui.border1, 20),
-    "statusBar.background": ui.bg1,
-    "statusBar.debuggingBackground": ui.bg1,
-    "statusBar.noFolderBackground": ui.bg1,
-    "statusBar.foreground": ui.fg,
+    "statusBar.background": ui.statusbar.bg,
+    "statusBar.debuggingBackground": ui.statusbar.bg,
+    "statusBar.noFolderBackground": ui.statusbar.bg,
+    "statusBar.foreground": ui.statusbar.fg,
   };
 }
 
@@ -418,13 +424,13 @@ function themeDragAndDrop(): ThemeUIColors {
 function themeButton(): ThemeUIColors {
   return {
     // Really wish we could get separate borders for the two button types...
-    "button.border": ui.fg,
-    "button.background": ui.fg,
+    "button.border": ui.accent,
+    "button.background": ui.accent,
     "button.foreground": ui.bg0,
     "button.hoverBackground": alpha(ui.fg, 80),
     "button.separator": alpha(ui.bg0, 30),
     "button.secondaryBackground": ui.bg0,
-    "button.secondaryForeground": ui.fg,
+    "button.secondaryForeground": ui.accent,
     "button.secondaryHoverBackground": alpha(ui.bg0, 80),
   };
 }
@@ -551,7 +557,7 @@ function colors(): ThemeUIColors {
     disabledForeground: ui.border1,
     "icon.foreground": ui.fg,
     "toolbar.hoverBackground": alpha(ui.border1, 20),
-    "toolbar.activeBackground": alpha(ui.border1, 40),
+    "toolbar.activeBackground": alpha(ui.border1, 30),
     "widget.border": ui.border0,
     "widget.shadow": ui.shadow,
     ...themeScrollbar(),
@@ -1142,6 +1148,20 @@ function save(): void {
 }
 
 function printContrastReport(): void {
+  showContrast(
+    "decoration",
+    ui.statusbar.border,
+    ui.statusbar.bg,
+    "ui.statusbar.border",
+    "ui.statusbar.bg"
+  );
+  showContrast(
+    "text",
+    ui.statusbar.fg,
+    ui.statusbar.bg,
+    "ui.statusbar.fg",
+    "ui.statusbar.bg"
+  );
   showContrast("text", ui.error, ui.bg0, "ui.error", "ui.bg0");
   showContrast("text", ui.error, ui.bg1, "ui.error", "ui.bg1");
   showContrast("text", ui.fg, ui.bg0, "ui.fg", "ui.bg0");
