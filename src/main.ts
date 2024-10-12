@@ -427,7 +427,7 @@ function themeButton(): ThemeUIColors {
     "button.border": ui.accent,
     "button.background": ui.accent,
     "button.foreground": ui.bg0,
-    "button.hoverBackground": alpha(ui.fg, 80),
+    "button.hoverBackground": alpha(ui.accent, 80),
     "button.separator": alpha(ui.bg0, 30),
     "button.secondaryBackground": ui.bg0,
     "button.secondaryForeground": ui.accent,

@@ -19,7 +19,7 @@
     "button.background": "#6741ca",
     "button.border": "#6741ca",
     "button.foreground": "#fff6f1",
-    "button.hoverBackground": "#5c0300cc",
+    "button.hoverBackground": "#6741cacc",
     "button.secondaryBackground": "#fff6f1",
     "button.secondaryForeground": "#6741ca",
     "button.secondaryHoverBackground": "#fff6f1cc",
