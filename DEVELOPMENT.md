@@ -4,6 +4,10 @@
 
 https://code.visualstudio.com/api/working-with-extensions/publishing-extension#get-a-personal-access-token
 
+## Scopes
+
+Packaging > Read, write, & manage
+
 ## Azure DevOps organization
 
 https://wavebeem.visualstudio.com/
