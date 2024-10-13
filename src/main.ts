@@ -59,21 +59,21 @@ const ui = {
   fg2: oklch(40, 30, 30),
 
   bg0: oklch(99, 20, 30),
-  bg0b: oklch(96, 20, 30),
+  bg0b: oklch(97, 20, 30),
   bg1: oklch(95, 20, 30),
 
-  border0: oklch(85, 10, 30),
+  border0: oklch(87, 10, 30),
   border1: oklch(60, 10, 30),
 
   tooltip: {
-    bg: oklch(99, 5, 140),
-    border: oklch(80, 2.5, 140),
+    bg: oklch(100, 0, 30),
+    border: oklch(60, 10, 30),
   },
 
   statusbar: {
-    bg: oklch(90, 20, 140),
-    fg: oklch(20, 40, 140),
-    border: oklch(85, 10, 140),
+    bg: oklch(90, 30, 140),
+    fg: oklch(30, 40, 140),
+    border: oklch(82, 30, 140),
   },
 
   cursor: oklch(50, 100, 340),

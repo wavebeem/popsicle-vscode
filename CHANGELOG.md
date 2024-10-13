@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.4.0 (2024-10-12)
+
+- Softened border colors again
+
+- Changed tooltip to white
+
+- Made status bar more green
+
+- Increased contrast between secondary and tertiary backgrounds
+
 ## 1.3.0 (2024-10-12)
 
 - Softened border colors
@@ -9,8 +19,6 @@
 - Desaturated background colors a little bit
 
 - Switched status bar to slime color
-
-- Changed tooltips to pale green
 
 ## 1.2.0 (2024-08-26)
 
