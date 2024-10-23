@@ -410,7 +410,7 @@ function themeDropdown(): ThemeUIColors {
 }
 
 function themeDragAndDrop(): ThemeUIColors {
-  const color = alpha(bg.blue, 30);
+  const color = alpha(bg.green, 30);
   return {
     "list.dropBackground": color,
     "sideBar.dropBackground": color,
@@ -484,11 +484,11 @@ function themeEditor(): ThemeUIColors {
     "editor.background": ui.bg0,
     "editor.foldBackground": transparent,
     "editorLink.activeForeground": ui.link,
-    "editor.lineHighlightBackground": alpha(bg.blue, 15),
+    "editor.lineHighlightBackground": alpha(bg.green, 15),
     "editor.rangeHighlightBackground": alpha(bg.yellow, 25),
-    "editor.selectionBackground": alpha(bg.blue, 30),
-    "editor.inactiveSelectionBackground": alpha(bg.blue, 30),
-    "editor.wordHighlightBackground": alpha(bg.blue, 50),
+    "editor.selectionBackground": alpha(bg.green, 30),
+    "editor.inactiveSelectionBackground": alpha(bg.green, 30),
+    "editor.wordHighlightBackground": alpha(bg.green, 50),
     "editor.wordHighlightStrongBackground": alpha(bg.purple, 50),
     "editorOverviewRuler.border": alpha(ui.border0, 25),
     "editorCursor.foreground": ui.cursor,

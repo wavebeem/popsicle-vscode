@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.0 (2024-10-22)
+
+- Changed the line highlight and text selection background colors to green
+
 ## 1.4.0 (2024-10-12)
 
 - Softened border colors again
