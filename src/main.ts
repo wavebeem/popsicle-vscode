@@ -58,8 +58,8 @@ const ui = {
   fg: oklch(30, 30, 30),
   fg2: oklch(40, 30, 30),
 
-  bg0: oklch(99, 20, 30),
-  bg0b: oklch(97, 20, 30),
+  bg0: oklch(99.95, 20, 30),
+  bg0b: oklch(98, 20, 30),
   bg1: oklch(95, 20, 30),
 
   border0: oklch(87, 10, 30),
@@ -70,10 +70,22 @@ const ui = {
     border: oklch(60, 10, 30),
   },
 
+  titlebar: {
+    bg: oklch(95, 20, 30),
+    fg: oklch(30, 30, 30),
+    border: oklch(87, 10, 30),
+    // bg: oklch(85, 30, 140),
+    // fg: oklch(30, 40, 140),
+    // border: oklch(73, 30, 140),
+  },
+
   statusbar: {
-    bg: oklch(90, 30, 140),
-    fg: oklch(30, 40, 140),
-    border: oklch(82, 30, 140),
+    bg: oklch(95, 20, 30),
+    fg: oklch(30, 30, 30),
+    border: oklch(87, 10, 30),
+    // bg: oklch(90, 40, 290),
+    // fg: oklch(45, 40, 290),
+    // border: oklch(82, 40, 290),
   },
 
   cursor: oklch(50, 100, 340),
@@ -363,7 +375,7 @@ function themeBadge(): ThemeUIColors {
 
 function themeMenu(): ThemeUIColors {
   return {
-    "menu.background": ui.bg1,
+    "menu.background": ui.bg0b,
     "menu.foreground": ui.fg,
     "menu.separatorBackground": ui.border0,
     "menu.border": ui.border0,
@@ -484,7 +496,8 @@ function themeEditor(): ThemeUIColors {
     "editor.background": ui.bg0,
     "editor.foldBackground": transparent,
     "editorLink.activeForeground": ui.link,
-    "editor.lineHighlightBackground": alpha(bg.green, 15),
+    "editor.lineHighlightBackground": alpha(ui.bg1, 25),
+    // "editor.lineHighlightBorder": alpha(ui.fg, 10),
     "editor.rangeHighlightBackground": alpha(bg.yellow, 25),
     "editor.selectionBackground": alpha(bg.green, 30),
     "editor.inactiveSelectionBackground": alpha(bg.green, 30),
@@ -523,11 +536,11 @@ function themeEditor(): ThemeUIColors {
 
 function themeTitlebar(): ThemeUIColors {
   return {
-    "titleBar.activeBackground": ui.bg1,
-    "titleBar.activeForeground": ui.fg,
-    "titleBar.inactiveBackground": ui.bg1,
-    "titleBar.inactiveForeground": ui.border1,
-    "titleBar.border": ui.border0,
+    "titleBar.activeBackground": ui.titlebar.bg,
+    "titleBar.activeForeground": ui.titlebar.fg,
+    "titleBar.inactiveBackground": ui.titlebar.bg,
+    "titleBar.inactiveForeground": ui.titlebar.fg,
+    "titleBar.border": ui.titlebar.border,
   };
 }
 
@@ -537,12 +550,12 @@ function themeTabs(): ThemeUIColors {
     "editorGroupHeader.tabsBorder": ui.border0,
     "editorGroupHeader.border": ui.border0,
     "breadcrumb.background": ui.bg0,
-    "editorGroupHeader.noTabsBackground": ui.bg0b,
+    "editorGroupHeader.noTabsBackground": ui.bg0,
     "editorGroupHeader.tabsBackground": ui.bg1,
-    "tab.activeBorder": ui.border0,
-    "tab.unfocusedActiveBorder": ui.border0,
-    "tab.activeBorderTop": ui.accent,
-    "tab.unfocusedActiveBorderTop": ui.accent,
+    "tab.activeBorder": transparent,
+    "tab.unfocusedActiveBorder": transparent,
+    "tab.activeBorderTop": transparent,
+    "tab.unfocusedActiveBorderTop": transparent,
     "tab.activeBackground": ui.bg0,
     "tab.activeForeground": syntax.default,
     "tab.inactiveBackground": ui.bg1,

@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.6.0 (2024-11-30)
+
+- Went back to the orange statusbar
+
+- Updated the orange backgrounds in the UI slightly
+
+- The active line color is more subtle and orange colored
+
 ## 1.5.0 (2024-10-22)
 
 - Changed the line highlight and text selection background colors to green
